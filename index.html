@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Espace Nouvel Air — Gaël Aymon · Soins énergétiques à Leytron</title>
+<meta name="description" content="Magnétisme, massage métamorphique et soins traditionnels avec Gaël Aymon, à Leytron (Valais). Un accompagnement simple et chaleureux, ouvert à tous.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://167korn-create.github.io/espace-nouvelair-site/">
+<meta property="og:title" content="Espace Nouvel Air — Gaël Aymon">
+<meta property="og:description" content="Magnétisme, massage métamorphique et soins traditionnels à Leytron, Valais.">
+<meta property="og:image" content="https://167korn-create.github.io/espace-nouvelair-site/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Espace Nouvel Air — Gaël Aymon">
+<meta name="twitter:description" content="Magnétisme, massage métamorphique et soins traditionnels à Leytron, Valais.">
+<meta name="twitter:image" content="https://167korn-create.github.io/espace-nouvelair-site/og-image.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --turquoise:#23928B;
+  --turquoise-deep:#145E59;
+  --turquoise-light:#E7F4F2;
+  --plum:#B98CB4;
+  --anthracite:#2B2B30;
+  --anthracite-soft:#4A4A52;
+  --cream:#F2ECE3;
+  --white:#FFFFFF;
+  --radius:16px;
+  --shadow:0 16px 40px -18px rgba(43,43,48,.25);
+  --space-xs:.5rem;
+  --space-sm:1rem;
+  --space-md:1.75rem;
+  --space-lg:3rem;
+  --space-xl:5rem;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:'Work Sans',-apple-system,BlinkMacSystemFont,sans-serif;
+  background:radial-gradient(ellipse 120% 60% at 50% 0%, #F1E7F0 0%, var(--cream) 55%);
+  color:var(--anthracite);
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+h1,h2,h3,.brand-name{font-family:'Fraunces',Georgia,serif;font-weight:500;color:var(--anthracite);}
+h1 em,h2 em,.brand-name em{font-style:italic;color:var(--turquoise-deep);font-weight:500;}
+a{color:inherit;text-decoration:none;}
+.container{max-width:1120px;margin:0 auto;padding:0 24px;}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:2.5px solid var(--turquoise-deep);outline-offset:3px;border-radius:4px;}
+
+/* Header */
+.site-header{position:sticky;top:0;z-index:50;background:rgba(251,249,245,.9);backdrop-filter:blur(10px);border-bottom:1px solid rgba(43,43,48,.08);}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;}
+.brand{display:flex;align-items:center;gap:12px;}
+.moth-mark{width:34px;height:26px;flex-shrink:0;}
+.brand-name{font-size:1.05rem;letter-spacing:.02em;display:block;}
+.brand-sub{font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--anthracite-soft);display:block;margin-top:2px;}
+.site-nav{display:flex;align-items:center;gap:28px;}
+.site-nav a{font-size:.92rem;color:var(--anthracite-soft);transition:color .2s;}
+.site-nav a:hover{color:var(--turquoise-deep);}
+.nav-cta{background:var(--anthracite);color:var(--white)!important;padding:9px 20px;border-radius:30px;}
+.nav-cta:hover{background:var(--turquoise-deep)!important;}
+
+/* Hero */
+.hero{padding:var(--space-xl) 0 var(--space-lg);}
+.hero-inner{display:grid;grid-template-columns:1.2fr .8fr;gap:var(--space-lg);align-items:center;}
+.eyebrow{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--turquoise-deep);font-weight:600;margin-bottom:var(--space-sm);display:block;}
+.hero h1{font-size:clamp(2.1rem,5vw,3.2rem);line-height:1.15;margin-bottom:var(--space-md);}
+.hero p{font-size:1.05rem;color:var(--anthracite-soft);max-width:520px;margin-bottom:var(--space-md);}
+.btn-row{display:flex;gap:14px;flex-wrap:wrap;}
+.btn{display:inline-block;padding:13px 26px;border-radius:30px;font-size:.92rem;font-weight:500;transition:.2s;}
+.btn-primary{background:var(--turquoise-deep);color:var(--white);}
+.btn-primary:hover{background:var(--anthracite);}
+.btn-outline{border:1.5px solid var(--anthracite);color:var(--anthracite);}
+.btn-outline:hover{border-color:var(--turquoise-deep);color:var(--turquoise-deep);}
+
+/* Hero signature illustration: moth + magnetic field rings — the one signature moment */
+.hero-visual{display:flex;align-items:center;justify-content:center;}
+.hero-signature{width:100%;max-width:320px;animation:sigIn 1.3s ease-out both;}
+.signature-svg{width:100%;height:auto;display:block;}
+.ring-a{animation:breatheA 7s ease-in-out infinite;}
+.ring-b{animation:breatheB 7s ease-in-out infinite .4s;}
+.ring-c{animation:breatheC 7s ease-in-out infinite .8s;}
+@keyframes sigIn{from{opacity:0;transform:scale(.9);}to{opacity:1;transform:scale(1);}}
+@keyframes breatheA{0%,100%{opacity:.16}50%{opacity:.3}}
+@keyframes breatheB{0%,100%{opacity:.26}50%{opacity:.42}}
+@keyframes breatheC{0%,100%{opacity:.38}50%{opacity:.55}}
+@media (prefers-reduced-motion: reduce){
+  .hero-signature,.ring-a,.ring-b,.ring-c{animation:none!important;}
+}
+
+section{padding:var(--space-xl) 0;}
+.section-head{max-width:640px;margin-bottom:var(--space-lg);}
+.section-head.center{margin-left:auto;margin-right:auto;text-align:center;}
+.section-head h2{font-size:clamp(1.6rem,3.5vw,2.2rem);margin-top:6px;}
+
+/* About */
+.about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:var(--space-lg);align-items:center;}
+.placeholder-frame{aspect-ratio:4/5;border-radius:var(--radius);background:linear-gradient(160deg,var(--turquoise-light),var(--cream));display:flex;align-items:center;justify-content:center;text-align:center;padding:24px;border:1px solid rgba(42,163,156,.2);}
+.placeholder-frame.wide{aspect-ratio:16/10;}
+.placeholder-frame span{font-size:.85rem;color:var(--anthracite-soft);font-style:italic;}
+.about-text p{color:var(--anthracite-soft);margin-bottom:var(--space-sm);}
+.about-text p:last-child{margin-bottom:0;color:var(--anthracite);font-weight:500;}
+
+/* Prestations */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:var(--space-md);}
+.card{background:var(--white);border-radius:var(--radius);padding:var(--space-md);box-shadow:var(--shadow);border:1px solid rgba(43,43,48,.05);transition:transform .25s,box-shadow .25s;}
+.card:hover{transform:translateY(-4px);box-shadow:0 20px 44px -16px rgba(43,43,48,.28);}
+.card-icon{width:38px;height:38px;margin-bottom:var(--space-sm);color:var(--turquoise-deep);}
+.card h3{font-size:1.2rem;margin-bottom:10px;}
+.card p{color:var(--anthracite-soft);font-size:.95rem;}
+.prestations-note{margin-top:var(--space-md);font-size:.88rem;color:var(--anthracite-soft);font-style:italic;}
+
+/* Lieu */
+.lieu{background:linear-gradient(155deg,var(--white) 40%,#F1E7F0 100%);}
+.lieu-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:var(--space-lg);align-items:center;}
+.lieu-text p{color:var(--anthracite-soft);}
+
+/* Contact */
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:var(--space-lg);}
+.contact-item{display:flex;gap:14px;margin-bottom:var(--space-sm);align-items:flex-start;}
+.contact-item .ic{width:20px;height:20px;flex-shrink:0;margin-top:3px;color:var(--turquoise-deep);}
+.contact-item .to-fill{color:var(--turquoise-deep);font-weight:500;}
+.social-row{display:flex;gap:10px;margin-top:var(--space-md);flex-wrap:wrap;}
+.social-row a{border:1px solid rgba(43,43,48,.15);border-radius:30px;padding:8px 16px;font-size:.85rem;color:var(--anthracite-soft);transition:.2s;}
+.social-row a:hover{border-color:var(--turquoise-deep);color:var(--turquoise-deep);}
+.form-group{margin-bottom:var(--space-sm);}
+.form-group label{display:block;font-size:.82rem;color:var(--anthracite-soft);margin-bottom:6px;}
+.form-group input,.form-group textarea{width:100%;border:1.5px solid rgba(43,43,48,.15);border-radius:10px;padding:12px 14px;font-family:inherit;font-size:.95rem;background:var(--white);}
+.form-group input:focus,.form-group textarea:focus{outline:none;border-color:var(--turquoise-deep);}
+.contact-form{background:var(--white);padding:var(--space-md);border-radius:var(--radius);box-shadow:var(--shadow);}
+
+footer{background:var(--anthracite);color:rgba(255,255,255,.75);padding:var(--space-lg) 0 var(--space-md);}
+.footer-inner{display:flex;flex-direction:column;gap:10px;text-align:center;}
+footer small{font-size:.78rem;line-height:1.6;}
+
+@media (max-width:860px){
+  .hero-inner,.about-grid,.lieu-grid,.contact-grid{grid-template-columns:1fr;}
+  .hero{padding:2rem 0 var(--space-lg);}
+  .hero-visual{order:-1;margin-bottom:.5rem;}
+  .hero-signature{max-width:300px;margin:0 auto;}
+  .about-grid .placeholder-frame,.about-grid img{max-width:280px;margin:0 auto;}
+}
+@media (max-width:700px){
+  .nav-link{display:none;}
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="#accueil" class="brand">
+<img class="moth-mark" src="logo-header.webp" alt="" style="object-fit:contain;">
+      <span class="brand-text">
+        <span class="brand-name">Espace <em>Nouvel Air</em></span>
+        <span class="brand-sub">Gaël Aymon</span>
+      </span>
+    </a>
+    <nav class="site-nav" id="siteNav">
+      <a href="#accueil" class="nav-link">Accueil</a>
+      <a href="#apropos" class="nav-link">Gaël</a>
+      <a href="#prestations" class="nav-link">Prestations</a>
+      <a href="#lieu" class="nav-link">Le Cabinet</a>
+      <a href="#contact" class="nav-cta">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section id="accueil" class="hero">
+    <div class="container hero-inner">
+      <div>
+        <span class="eyebrow">Espace Nouvel Air — Leytron, Valais</span>
+        <h1>Un nouvel air,<br>un <em>nouvel équilibre</em>.</h1>
+        <p>Séances de magnétisme, de massage métamorphique et de soins traditionnels avec Gaël Aymon. Un moment pour soi, sans jugement — ouvert à tous, sceptiques compris.</p>
+        <div class="btn-row">
+          <a href="#contact" class="btn btn-primary">Prendre contact</a>
+          <a href="#prestations" class="btn btn-outline">Voir les soins</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-signature">
+          <svg class="signature-svg" viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle class="ring-a" cx="160" cy="160" r="146" fill="none" stroke="#B98CB4" stroke-width="1" stroke-dasharray="1 10 3 6" opacity=".22"/>
+            <circle class="ring-b" cx="160" cy="160" r="112" fill="none" stroke="#23928B" stroke-width="1" stroke-dasharray="2 8" opacity=".28" transform="rotate(12 160 160)"/>
+            <circle class="ring-c" cx="160" cy="160" r="80" fill="none" stroke="#23928B" stroke-width="1.1" stroke-dasharray="4 5 1 7" opacity=".4" transform="rotate(-8 160 160)"/>
+
+            <circle cx="238" cy="96" r="1.6" fill="#23928B" opacity=".7"/>
+            <circle cx="252" cy="180" r="1.2" fill="#23928B" opacity=".5"/>
+            <circle cx="90" cy="230" r="1.8" fill="#23928B" opacity=".6"/>
+            <circle cx="70" cy="120" r="1.3" fill="#23928B" opacity=".55"/>
+            <circle cx="200" cy="250" r="1.4" fill="#23928B" opacity=".45"/>
+
+            <image href="logo-hero.webp" x="65" y="99" width="190" height="121" preserveAspectRatio="xMidYMid meet"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="apropos">
+    <div class="container about-grid">
+      <img src="gael.jpg" alt="Gaël Aymon" style="width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:var(--radius);display:block;">
+      <div class="about-text">
+        <span class="eyebrow">Gaël Aymon</span>
+        <h2>Un accompagnement simple et <em>chaleureux</em></h2>
+        <p>Après une formation professionnelle menée en parallèle ces derniers mois, Gaël reprend aujourd'hui ses soins énergétiques à Leytron, en Valais.</p>
+        <p>Magnétisme, massage métamorphique, secrets transmis de génération en génération — chaque séance est pensée comme une parenthèse, sans dogme ni promesse, où le corps et l'esprit peuvent simplement se poser.</p>
+        <p>Sceptique ou déjà convaincu·e, vous êtes bienvenu·e. Beaucoup de personnes qui doutaient au départ ressortent surprises par ce qu'elles ont ressenti.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="prestations">
+    <div class="container">
+      <div class="section-head center">
+        <span class="eyebrow">Les soins</span>
+        <h2>Trois approches, un même objectif : <em>votre bien-être</em></h2>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M7 12h10"/></svg>
+          <h3>Magnétisme</h3>
+          <p>Le magnétisme consiste à canaliser une énergie pour aider le corps à se rééquilibrer naturellement. De nombreuses personnes décrivent, séance après séance, une sensation de détente profonde. Une approche douce, qui peut accompagner votre bien-être au quotidien.</p>
+        </div>
+        <div class="card">
+          <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 21c-4-3-8-6.5-8-11a5 5 0 0 1 8-4 5 5 0 0 1 8 4c0 4.5-4 8-8 11Z"/></svg>
+          <h3>Massage métamorphique</h3>
+          <p>Inspiré des zones réflexes des pieds, des mains et de la tête, ce massage tout en douceur invite à un profond lâcher-prise. Il peut accompagner les périodes de changement, de fatigue ou simplement de stress passager.</p>
+        </div>
+        <div class="card">
+          <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/></svg>
+          <h3>Les secrets</h3>
+          <p>Une pratique traditionnelle, transmise de génération en génération, mobilisée en complément pour apaiser certains inconforts du quotidien. Discrète et rapide, elle peut s'intégrer facilement à une séance ou se pratiquer seule, sur demande.</p>
+        </div>
+      </div>
+      <p class="prestations-note">À adapter selon vos besoins du moment — n'hésitez pas à en discuter ensemble avant la séance.</p>
+    </div>
+  </section>
+
+  <section id="lieu" class="lieu">
+    <div class="container lieu-grid">
+      <div class="lieu-text">
+        <span class="eyebrow">Le lieu</span>
+        <h2>Un <em>cocon</em>, loin de tout cadre médicalisé</h2>
+        <p>Niché à Leytron, le cabinet est pensé comme un espace simple et chaleureux : lumière tamisée, plantes, mandala et instruments de soin. Un lieu pour se sentir accueilli·e dès la porte franchie.</p>
+      </div>
+      <img src="cabinet.jpg" alt="Le cabinet de soins à Leytron" style="width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:var(--radius);display:block;">
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container contact-grid">
+      <div>
+        <span class="eyebrow">Contact</span>
+        <h2>Une question, une envie de <em>rendez-vous</em> ?</h2>
+        <p style="color:var(--anthracite-soft);margin:14px 0 var(--space-md);">Écrivez-moi ou appelez-moi directement — je réponds personnellement à chaque message.</p>
+
+        <div class="contact-item">
+          <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.7 2Z"/></svg>
+          <span class="to-fill">[Téléphone à ajouter]</span>
+        </div>
+        <div class="contact-item">
+          <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20.5 11.5a8.5 8.5 0 1 1-3.8-7.1M20.5 3.5l-4.3 1.1 1.1 4.3"/><path d="M8.5 10c.3 2 2.5 4.2 4.5 4.5.6.1 1.1-.3 1.3-.9l.2-.7a.7.7 0 0 0-.4-.8l-1.4-.6a.7.7 0 0 0-.8.2l-.3.3c-.7-.3-1.6-1.2-1.9-1.9l.3-.3a.7.7 0 0 0 .2-.8l-.6-1.4a.7.7 0 0 0-.8-.4l-.7.2c-.6.2-1 .7-.9 1.3"/></svg>
+          <span class="to-fill">[Numéro WhatsApp à ajouter]</span>
+        </div>
+        <div class="contact-item">
+          <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
+          <span class="to-fill">[Email à ajouter]</span>
+        </div>
+        <div class="contact-item">
+          <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>Leytron, Valais<br><small style="color:var(--anthracite-soft);">adresse précise communiquée à la confirmation du rendez-vous</small></span>
+        </div>
+
+        <div class="social-row">
+          <a href="https://www.facebook.com/share/1DxKNdAoyh/" target="_blank" rel="noopener">Facebook — Espace Nouvelair</a>
+          <a href="https://www.instagram.com/espacenouvelair" target="_blank" rel="noopener">Instagram — @espacenouvelair</a>
+        </div>
+      </div>
+
+      <form class="contact-form" id="contactForm">
+        <div class="form-group">
+          <label for="cf-name">Nom</label>
+          <input type="text" id="cf-name" required>
+        </div>
+        <div class="form-group">
+          <label for="cf-email">Email</label>
+          <input type="email" id="cf-email" required>
+        </div>
+        <div class="form-group">
+          <label for="cf-message">Message</label>
+          <textarea id="cf-message" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%;border:none;cursor:pointer;">Envoyer</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <span class="brand-name" style="color:#fff;font-size:1rem;">Espace <em style="color:#7CD6CF;">Nouvel Air</em></span>
+    <small>© 2026 Espace Nouvel Air — Gaël Aymon.</small>
+    <small style="opacity:.6;">Site réalisé par Abracadabra0420</small>
+  </div>
+</footer>
+
+<script>
+
+  document.getElementById('contactForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    const name = document.getElementById('cf-name').value;
+    const email = document.getElementById('cf-email').value;
+    const message = document.getElementById('cf-message').value;
+    const subject = encodeURIComponent('Nouveau message depuis le site — ' + name);
+    const body = encodeURIComponent(message + '\n\n— ' + name + ' (' + email + ')');
+    window.location.href = 'mailto:EMAIL-A-COMPLETER@exemple.ch?subject=' + subject + '&body=' + body;
+  });
+</script>
+
+</body>
+</html>
